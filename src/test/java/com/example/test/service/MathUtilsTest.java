@@ -1,5 +1,6 @@
-package com.example.test.config;
+package com.example.test.service;
 
+import com.example.test.service.impl.MathUtils;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,8 +57,8 @@ class MathUtilsTest {
         //LOGGER.info("you can get all info about the current repeated test -> {}", repetitionInfo);
         //org.assertj.core.api.Assumptions.assumeThat(repetitionInfo.getCurrentRepetition() != 1);
         assertAll(
-                () -> assertDoesNotThrow(() -> mathUtils.devide(2, 0)),
-                () -> assertEquals(4, mathUtils.devide(8, 2))
+                () -> assertDoesNotThrow(() -> mathUtils.divide(2, 0)),
+                () -> assertEquals(4, mathUtils.divide(8, 2))
         );
 
     }
