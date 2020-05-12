@@ -11,17 +11,17 @@ public class MathController {
     @Autowired
     private IMathUtils mathUtils;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @GetMapping(value = "/add")
     public int sum(@RequestParam int a, @RequestParam int b) {
         return mathUtils.add(a, b);
     }
 
-    @RequestMapping(value = "/multiply", method = RequestMethod.GET)
+    @GetMapping(value = "/multiply")
     public int multiply(@RequestParam int a, @RequestParam int b) {
         return mathUtils.multiply(a, b);
     }
 
-    @RequestMapping(value = "/divide", method = RequestMethod.GET)
+    @GetMapping(value = "/divide")
     public double divide(@RequestParam int a, @RequestParam int b) {
         return mathUtils.divide(a, b);
     }

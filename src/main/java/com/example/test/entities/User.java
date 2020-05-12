@@ -1,16 +1,14 @@
 package com.example.test.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class User {
 
     @Id
@@ -18,7 +16,6 @@ public class User {
     private Long id;
     private String firstName;
     private String lastName;
-
 
     public User(String firstName, String lastName) {
         this.firstName = firstName;
