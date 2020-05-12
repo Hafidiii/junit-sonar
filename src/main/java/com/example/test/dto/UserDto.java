@@ -1,6 +1,5 @@
 package com.example.test.dto;
 
-import com.example.test.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +17,4 @@ public class UserDto {
     @Setter
     private String lastName;
 
-    public UserDto(User user){
-        this.firstName=user.getFirstName();
-        this.lastName=user.getLastName();
-    }
 }

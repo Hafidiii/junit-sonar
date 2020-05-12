@@ -1,5 +1,6 @@
 package com.example.test.controller;
 
+import com.example.test.constants.Constants;
 import com.example.test.dto.UserDto;
 import com.example.test.entities.User;
 import com.example.test.service.IUserService;
@@ -20,9 +21,9 @@ public class UserController {
     public Map<String, Object> getAll(){
         Map<String, Object> map = new HashMap<>();
 
-        map.put("users", userService.getAll());
-        map.put("total", userService.getAll().size());
-        map.put("success", true);
+        map.put(Constants.USERS, userService.getAll());
+        map.put(Constants.TOTAL, userService.getAll().size());
+        map.put(Constants.SUCCESS, true);
 
         return map;
     }
@@ -32,8 +33,8 @@ public class UserController {
         Map<String, Object> map = new HashMap<>();
 
         User user = userService.save(userDto);
-        map.put("message", user.getFirstName() + " is created successfully");
-        map.put("success", true);
+        map.put(Constants.MESSAGE, user.getFirstName() + " is created successfully");
+        map.put(Constants.SUCCESS, true);
 
         return map;
     }
